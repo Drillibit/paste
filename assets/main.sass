@@ -17,6 +17,7 @@ $bold-font: "Open Sans Bold"
 	margin: 0 auto
 	width: 80%
 // Menu
+
 #logo
 	color: #fff
 	font-family: $pro-font
@@ -47,21 +48,27 @@ $bold-font: "Open Sans Bold"
 			display: flex
 			list-style: none
 			align-items: center
-			li
-				a
-					text-decoration: none
-					color: #fff
-					margin-right: 1rem
-					font-family: $main-font
-					border-bottom: 2px solid transparent
-					padding-bottom: .7rem
-					&:hover
-						border-bottom: 2px solid #fff
+			.nav-item
+        padding-bottom: .7rem
+        margin-right: 1rem
+        &:hover
+          border-bottom: 2px solid #fff
+          margin-bottom: -2px 
+
+.active
+  border-bottom: 2px solid #fff
+  margin-bottom: -2px
+.nav-link
+	text-decoration: none
+	color: #fff
+	font-family: $main-font
+
+
 
 // Gallery animtion and layout
 #main
 	background-color: rgb(219, 219, 219)
-	padding-top: 3rem
+	padding-top: 6rem
 	padding-bottom: 2rem
 	.photo-container
 		display: flex

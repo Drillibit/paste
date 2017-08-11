@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var scrollLink = $('a');
+  var scrollLink = $('.scroll');
   // Smooth scrolling
   scrollLink.click(function(e){
     e.preventDefault();
@@ -8,11 +8,11 @@ $(document).ready(function(){
     }, 1000);
   });
   // Active link switching
-  $(window).scroll(function(){
-    var scrollBarLocation = $(this).scrollTop();
+  $(window).scroll(function(){ //everything happening on scroll
+    var scrollBar = $(this).scrollTop();
     scrollLink.each(function(){
-      var sectionOffset = $(this.hash).offset().top // you can substract -20 
-      if(sectionOffset <= scrollBarLocation){
+      var secOf = $(this.hash).offset().top;
+      if(secOf <= scrollBar){
         $(this).parent().addClass('active');
         $(this).parent().siblings().removeClass('active');
       }

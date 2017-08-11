@@ -65,20 +65,26 @@
   -ms-flex-align: center;
   align-items: center; }
 
-#navigation .navigation ul li a {
+#navigation .navigation ul .nav-item {
+  padding-bottom: .7rem;
+  margin-right: 1rem; }
+
+#navigation .navigation ul .nav-item:hover {
+  border-bottom: 2px solid #fff;
+  margin-bottom: -2px; }
+
+.active {
+  border-bottom: 2px solid #fff;
+  margin-bottom: -2px; }
+
+.nav-link {
   text-decoration: none;
   color: #fff;
-  margin-right: 1rem;
-  font-family: "Helvetica";
-  border-bottom: 2px solid transparent;
-  padding-bottom: .7rem; }
-
-#navigation .navigation ul li a:hover {
-  border-bottom: 2px solid #fff; }
+  font-family: "Helvetica"; }
 
 #main {
   background-color: #dbdbdb;
-  padding-top: 3rem;
+  padding-top: 6rem;
   padding-bottom: 2rem; }
 
 #main .photo-container {
