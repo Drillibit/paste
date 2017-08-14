@@ -112,18 +112,33 @@
 	<footer>
 		<div class="wrapper">
 			<div class="col-f">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="5800" viewBox="0 0 1600 5800">
-				  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-				<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-				   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-				      <rdf:Description rdf:about=""/>
-				   </rdf:RDF>
-				</x:xmpmeta>
-				</svg>
+
+
+
 				<h4>Контактная информация</h4>
 			</div>
 			<div class="col-f">
-
+				<div class="container">
+					<?php if($msg != ''): ?>
+						<div class="alert <?php echo $msgClass; ?>"><?php echo $msg ?></div>
+					<?php endif; ?>
+					<form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+						<div class="form-group">
+							<label for="">Name</label>
+							<input type="text" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="">Email</label>
+							<input type="text" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="">Message</label>
+							<textarea name="message" class="form-control"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+						</div>
+						<br>
+						<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</footer>

@@ -10,10 +10,6 @@
   font-family: "Helvetica";
   src: url("../../fonts/helvetica.otf"); }
 
-.wrapper {
-  margin: 0 auto;
-  width: 80%; }
-
 #logo {
   color: #fff;
   font-family: "Myriad Pro";
@@ -199,3 +195,7 @@
 
 footer {
   background: black; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%; }

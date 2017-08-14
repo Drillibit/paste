@@ -1,0 +1,39 @@
+#main
+	background-color: rgb(219, 219, 219)
+	padding-top: 6rem
+	padding-bottom: 2rem
+	.photo-container
+		display: flex
+		justify-content: space-between
+		width: 100%
+		margin-top: 1rem
+.slide,
+.photo
+	position: relative
+	text-align: center
+	display: flex
+	flex-direction: column
+	overflow: hidden
+.slide
+	// &:hover
+	// 	img
+	// 		transform: translateX(100%)
+	img
+		width: 370px
+		height: 275px
+		transform: translateX(0)
+		transition: transform .6s ease-out
+	.photo-overlay
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		color: #fff
+		background-color: #4a89ca
+		padding: 20px
+		transform: translateX(-100%)
+		transition: transform .6s ease-out
+	&:hover
+		.photo-overlay
+			transform: translateX(0)
